@@ -46,35 +46,35 @@ export type Carte = {
  */
 
  export function afficherCarte (card : Carte){
-    let valeurcarte : number = card.valeur;
-    let tetecarte : string;
-    if (valeurcarte == 11){
-        tetecarte= "Valet";
+    let valeurCarte : number = card.valeur;
+    let teteCarte : string;
+    if (valeurCarte == 11){
+        teteCarte= "Valet";
     }
-    else if (valeurcarte ==12){
-        tetecarte="Dame";
+    else if (valeurCarte ==12){
+        teteCarte="Dame";
     }
-    else if (valeurcarte ==13){
-        tetecarte="Roi";
+    else if (valeurCarte ==13){
+        teteCarte="Roi";
     }
-    else if (valeurcarte ==14){
-        tetecarte="As";
+    else if (valeurCarte ==14){
+        teteCarte="As";
     }
     else{
-        tetecarte= String(valeurcarte);
+        teteCarte= String(valeurCarte);
     }
     
     if(card.couleur==0){
-        console.log(tetecarte , " de ♠️"  );
+        console.log(teteCarte , " de ♠️"  );
     }
     else if(card.couleur == 1) {
-        console.log(tetecarte , " de ♦️" );
+        console.log(teteCarte , " de ♦️" );
     }
     else if(card.couleur == 2) {
-        console.log(tetecarte , " de ♣️" );
+        console.log(teteCarte , " de ♣️" );
     }
      else{
-        console.log(tetecarte , " de ♥️" );
+        console.log(teteCarte , " de ♥️" );
     }
 }
 
@@ -83,14 +83,17 @@ export type Carte = {
  * 
  * @param carte1 1ere carte à comparer
  * @param carte2 2eme carte à comparer
- * @returns retourne un 1, -1 ou 0 si la première carte est plus forte, plus faible ou égal à la deuxième
+ * @returns retourne 1, -1 ou 0 si la première carte est plus forte, plus faible ou égal à la deuxième
  */
+
  export function comparerCartes ( carte1 : Carte , carte2 : Carte): number{
     if (carte1.valeur > carte2.valeur){
         return 1;
-    }else if ( carte1.valeur = carte2.valeur){
-        return 0;
-    }else{
+    }
+    else if (carte1.valeur < carte2.valeur){
         return -1;
+    }
+    else{
+        return 0;
     }
 }
