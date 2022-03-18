@@ -9,7 +9,7 @@
  * Implémentation des couleurs des cartes
  */
 
-export enum couleur {
+export enum Couleur {
     pique,
     carreau,
     trefle,
@@ -20,8 +20,8 @@ export enum couleur {
  * Caractéristiques d'une carte
  */
 
-export type carte = {
-    couleur :  couleur,
+export type Carte = {
+    couleur :  Couleur,
     valeur  :  number
 };
 
@@ -32,8 +32,8 @@ export type carte = {
  * @returns Retourne la carte créée selon les paramètres entrés.
  */
 
- export function creationCarte(color : couleur, value : number): carte {
-    let card : carte ;
+ export function creerCarte (color : Couleur, value : number): Carte {
+    let card : Carte ;
     card.couleur = color;
     card.valeur = value;
     return card;
@@ -45,7 +45,7 @@ export type carte = {
  * @param card carte que l'on souhaite afficher
  */
 
- export function affichageCarte(card : carte){
+ export function afficherCarte (card : Carte){
     let valeurcarte : number = card.valeur;
     let tetecarte : string;
     if (valeurcarte == 11){
@@ -75,5 +75,22 @@ export type carte = {
     }
      else{
         console.log(tetecarte , " de ♥️" );
+    }
+}
+
+/**
+ * Fonction qui compare une première carte à une deuxième
+ * 
+ * @param carte1 1ere carte à comparer
+ * @param carte2 2eme carte à comparer
+ * @returns retourne un 1, -1 ou 0 si la première carte est plus forte, plus faible ou égal à la deuxième
+ */
+ export function comparerCartes ( carte1 : Carte , carte2 : Carte): number{
+    if (carte1.valeur > carte2.valeur){
+        return 1;
+    }else if ( carte1.valeur = carte2.valeur){
+        return 0;
+    }else{
+        return -1;
     }
 }
