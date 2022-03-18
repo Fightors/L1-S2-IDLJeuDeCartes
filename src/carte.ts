@@ -28,3 +28,15 @@
     return jeu_cartes;
 }
 
+/**
+ * Fonction qui retourne la première carte tiré d'un paquet de jeu de cartes
+ * @param jeu_de_cartes Jeu de cartes auquel on va tiré une carte
+ * @returns retourne la carte tiré dans le jeu de carte
+ */
+
+ export function tirerCarte(jeu_de_cartes : Carte[]): Carte{
+    let card : Carte ;
+    card = jeu_de_cartes[0];
+    jeu_de_cartes.splice(0,1);
+    return card;
+}
