@@ -63,16 +63,17 @@ export type carte = {
     else{
         tetecarte= String(valeurcarte);
     }
+    
     if(card.couleur==0){
-    console.log(tetecarte , " de ♠️"  );
+        console.log(tetecarte , " de ♠️"  );
     }
     else if(card.couleur == 1) {
-         console.log(tetecarte , " de ♦️" );
+        console.log(tetecarte , " de ♦️" );
     }
     else if(card.couleur == 2) {
-         console.log(tetecarte , " de ♣️" );
+        console.log(tetecarte , " de ♣️" );
     }
      else{
-         console.log(tetecarte , " de ♥️" );
+        console.log(tetecarte , " de ♥️" );
     }
 }
