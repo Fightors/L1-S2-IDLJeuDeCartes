@@ -1,7 +1,5 @@
 # distanciel-idl-jeu-cartes
 
-bZUGaEQFzvbbOesueKsJktE7y
-
 Ce projet en distanciel consiste en la création de deux modules : carte et jeu, qui permettent la création et manipulation de cartes et d'un jeu de cartes de manière conventtionelle.
 
 Le module 'carte' se concentre sur la création, l'affichage et la comparaison de cartes et comprend donc 3 fonctions
